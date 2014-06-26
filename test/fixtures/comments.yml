@@ -2,6 +2,10 @@
 
 one:
   body: MyText
+  author: MyString
+  post_id: 1
 
 two:
   body: MyText
+  author: MyString
+  post_id: 1
