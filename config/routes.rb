@@ -15,7 +15,9 @@ Rails.application.routes.draw do
   root 'welcome#page'
   #root 'welcome#index'
   
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
   # Example of regular route:
   #get 'posts/:id' => 'posts#show'
 
