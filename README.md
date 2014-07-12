@@ -5,6 +5,7 @@ blog para la tutoria de ruby
 
 ###TODO:
 
+
 blog users/new (creo que es el sign up)
 
 1. user sccaffold (email, password)
