@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
 
+  before_action :authenticate
+
   def index
     @posts = Post.all
   end
@@ -44,6 +46,12 @@ class PostsController < ApplicationController
   end
   
   private
+  
+    def authenticate
+      unless session[:user_id]
+        redirect_to root_url, :notice => "U've got to log in!"
+      end
+    end    
   
     def post_params
       params.require(:post).permit(:title, :body)

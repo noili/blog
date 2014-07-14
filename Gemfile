@@ -40,3 +40,5 @@ gem 'spring',        group: :development
 gem 'pry'
 
 gem "bcrypt-ruby", :require => "bcrypt"
+
+gem 'protected_attributes'
