@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 
-  before_action :authenticate
+  before_action :authenticate!, only:[:create, :update, :destroy, :new]
 
   def index
     @posts = Post.all
@@ -21,11 +21,11 @@ class PostsController < ApplicationController
   end
   
   def show
-    @post = Post.find(params[:id])
+    @post = Post.find params[:id]
   end
   
   def edit
-    @post = Post.find(params[:id])
+    @post = Post.find params[:id]
   end
   
   def update
